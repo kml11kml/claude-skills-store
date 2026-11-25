@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursor Bill Guard — Claude Code skill · $9 one-time · Priced Pain Finder</title>
+<meta name="description" content="Stop your $20 Cursor Pro plan becoming a $1,400 hour. Cursor Pro costs $20 a month — and that is not a cap. In June 2025 Cursor replaced Pro&#x27;s 500 fast requests a month with… $9 one-time, pay with USDT (TRC20).">
+<link rel="canonical" href="https://priced-pain-finder.pages.dev/product/cursor-bill-guard/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Priced Pain Finder">
+<meta property="og:title" content="Cursor Bill Guard — $9 one-time">
+<meta property="og:description" content="Stop your $20 Cursor Pro plan becoming a $1,400 hour.">
+<meta property="og:url" content="https://priced-pain-finder.pages.dev/product/cursor-bill-guard/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cursor Bill Guard — $9 one-time">
+<meta name="twitter:description" content="Stop your $20 Cursor Pro plan becoming a $1,400 hour.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Cursor Bill Guard",
+  "description": "Stop your $20 Cursor Pro plan becoming a $1,400 hour.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priced Pain Finder"
+  },
+  "category": "Cost guard",
+  "url": "https://priced-pain-finder.pages.dev/product/cursor-bill-guard/",
+  "version": "0.1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": 9,
+    "availability": "https://schema.org/InStock",
+    "url": "https://priced-pain-finder.pages.dev/product/cursor-bill-guard/",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner"><a class="wordmark" href="/">Priced Pain <span>Finder</span></a><nav class="nav-links" aria-label="Main"><a href="/#skills">Skills</a><a class="hide-sm" href="/#how-it-works">How it works</a><a class="hide-sm" href="/#faq">FAQ</a><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram</a></nav></div></header>
+<main class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#skills">Skills</a> / Cost guard / Cursor Bill Guard</p>
+<div class="product-head">
+<div>
+<span class="eyebrow">Claude Code skill</span>
+<h1>Cursor Bill Guard</h1>
+<p class="lede" style="font-size:19px;color:var(--muted)">Stop your $20 Cursor Pro plan becoming a $1,400 hour.</p>
+<div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span><span class="tag">v0.1.0</span><span class="tag">MIT licence</span></div>
+</div>
+<aside class="buy-box" aria-label="Buy this skill"><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · no subscription</span></div><p class="small muted">Claude Code skill · v0.1.0 · MIT licence</p><a class="btn" href="#buy">Buy with USDT — $9</a><p class="small"><strong>What you get:</strong> SKILL.md, scripts, skill.yaml, LICENSE + README.md. Download link delivered after payment is verified.</p><p class="small muted">No card checkout. No account needed. Payment is a manual USDT transfer — see the steps below.</p></aside>
+</div>
+
+<section class="reveal"><h2>The problem</h2><p>Cursor Pro costs $20 a month — and that is not a cap. In June 2025 Cursor replaced Pro&#x27;s 500 fast requests a month with $20 of model usage billed at API prices, plus on-demand overage once the pool runs out. In June 2026 a team posted on r/cursor that asking the agent to tag 87 tasks burned $1,400 in one hour (~$16 a task); Cursor&#x27;s CEO refunded it personally two days later. A Pro subscriber on Hacker News had his $20 pool vanish in 4 days on silent on-demand billing: $42.12 of on-demand usage, about $60 in ~2.5 weeks, refund denied. Another developer woke up on June 19 to $130 in overnight charges while the editor was not even open. In September 2026 Ultra users reported paying $200 for $125 of usage at Cursor&#x27;s own published rates.</p></section>
+
+<section class="reveal"><h2>What it does</h2><ul class="checklist"><li>Estimates before a big run — one request or a whole bulk job (--tasks N) at November 2026 provider list prices, with a warning above $20 and a yes required above $2 or your cap; the same request costs $2.25 on Opus, $0.66 on Sonnet, $0.45 on Haiku at the token counts in the worked example.</li><li>Tracks both usage pools — Cursor Models (Composer/Grok, included allowance) separately from Other Models (Claude/GPT/Gemini at API rates), so you can see which pool a run actually drains and how much on-demand spend has started.</li><li>Caps daily and per-task spend — defaults $10/day and $5/task, monthly cap $20 (legacy Pro); edit them in ~/.cursor-bill-guard/config.json to match your plan.</li><li>Brakes runaway loops and bulk jobs — 3 identical failures in a day stops retries; bulk jobs are split into batches of 5–10 with a dashboard check after the first batch.</li><li>Names the dashboard settings that matter — the on-demand toggle and spend limit on legacy plans, Auto Top-up off plus the monthly additional usage limit on X Subscription plans, spend alerts at $10 and $25, and the subagent-model setting that stops Auto spawning premium-model subagents you did not pick.</li></ul></section>
+
+<section class="reveal"><h2>What&rsquo;s inside</h2><ul class="checklist"><li>SKILL.md — the full skill: plan generations, dashboard limits, estimate-first workflow, caps, loop brakes, model-by-job pricing.</li><li>scripts/cursor_bill_guard.py — stdlib-only Python: estimate, record, check, status, fail commands. Local ledger, no network, no credentials.</li><li>skill.yaml — skill metadata (name, version 0.1.0, description).</li><li>LICENSE — MIT.</li><li>README.md — product page text with worked examples.</li></ul>
+<p class="small muted">Stdlib-only Python. No network, no credentials. Install: copy the folder into <code class="inline">~/.claude/skills/</code> and ask Claude Code to use it.</p></section>
+
+<section class="reveal"><h2>Worked example &mdash; real output</h2><p class="example">The $1,400-hour pattern, priced before it runs — 87 tasks on Opus at 200k input / 50k output tokens each: cost per request $2.25, bulk job 87 tasks x $2.25 = $195.75, with the warning &#x27;bulk total above $20 - get a yes before running it.&#x27; The same 87 tasks on Haiku: $0.45 per request, $39.15 total. One ordinary Sonnet request (120k input / 20k output): $0.66. The ledger after recording two runs: today $0.66 spent / $10.00 daily cap (9.34 left); this month $0.66 spent / $20.00 monthly cap (19.34 left). A $48 bulk estimate is blocked by both caps before it runs: &#x27;BLOCKED by task cap + daily cap - stop and ask the user, do not find a way around it.&#x27; And the loop brake: after 3 identical failures in a day — &#x27;STOP - 3 identical failures today. Do not retry the same thing.&#x27;</p>
+<p class="small muted">This is the output of the included script on the stated inputs, not a promise for your setup. Your numbers will differ; the skill prices yours.</p></section>
+
+<section class="reveal"><h2>Honest limits</h2><ul class="limits"><li>The guard works off a local ledger of token counts you record. It cannot see your Cursor billing page, your real usage, your dashboard percentages, or your spend settings — check the dashboard before paying for anything.</li><li>Cursor&#x27;s dashboard percentages and its usage export do not always reconcile at published API rates (Ultra users reported $200 for $125 of usage), so if the meter and the math disagree, trust the invoice.</li><li>No skill, hook, or script can cap a Cursor model call or change your dashboard settings — only the spend limit / on-demand toggle / Auto Top-up setting in the dashboard stops the meter, and Cursor&#x27;s own docs warn enforcement is not instant.</li><li>Rates are provider API list prices from November 2026. Cursor changed its pricing in June 2025 and again on 12 October 2026 — verify current pricing at cursor.com/pricing and edit the rates in the script.</li><li>This skill reduces surprise bills. It does not guarantee any saving, and it never executes a payment or changes your Cursor plan or settings.</li></ul></section>
+
+<section id="buy" class="reveal"><h2>Buy with USDT</h2><p>There is no card checkout on this store. Buying is a manual transfer, in four steps:</p><ol class="buy-steps"><li><strong>Send 9 USDT (TRC20)</strong> to this wallet address:</li></ol><div class="wallet"><code>TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez</code><button type="button" data-copy="TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez">Copy address</button></div><ol class="buy-steps" start="2"><li><strong>Send the transaction hash</strong> by Instagram DM to <a href="https://www.instagram.com/agent2027boutique" rel="noopener">@agent2027boutique</a>.</li><li><strong>We verify the hash on-chain</strong> (Tron network, TRC20).</li><li><strong>The download link is sent back</strong> to you in the same Instagram DM.</li></ol><p class="small muted">Send exactly 9 USDT on the TRC20 network. Sending on the wrong network, or a different amount, cannot be verified the same way — double-check the address before you send. Once the download link has been delivered, the sale is final: it is a digital file, so it cannot be returned.</p></section>
+
+<section class="reveal"><h2>You may also need</h2><div class="grid related"><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/actions-cost-cutter/">Actions Cost Cutter</a></h3><p class="problem">Cut your GitHub Actions bill before you pay it.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/copilot-credit-guard/">Copilot Credit Guard</a></h3><p class="problem">Stop burning your GitHub Copilot allowance.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Billing</span></div><h3><a href="/product/vercel-bill-guard/">Vercel Bill Guard</a></h3><p class="problem">Stop your $20 Pro plan becoming a $602 bill.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article></div></section>
+</main>
+<footer><div class="wrap foot-grid"><div><p><strong>Priced Pain Finder</strong><br>Claude Code skills, priced by the pain they kill.<br>Every skill $9 one-time. Pay with USDT (TRC20).</p></div><div><p><a href="/#skills">All skills</a><br><a href="/#how-it-works">How buying works</a><br><a href="/#faq">FAQ</a></p></div><div><p><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram: @agent2027boutique</a><br><span class="small">Questions or a payment hash? Send it by Instagram DM.</span></p></div></div><div class="wrap"><p class="small">All skills version 0.1.0, MIT licence. Prices inside the skills are snapshots read in November 2026 — verify current rates before relying on them. No skill guarantees a saving. This store makes no earnings claims.</p></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

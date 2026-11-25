@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP Setup Kit — Claude Code skill · $9 one-time · Priced Pain Finder</title>
+<meta name="description" content="Four free MCP servers for Claude Code — $0 per call, no hosted gateway. Hosted MCP gateways meter every tool call. Composio Pro is $29/month with tool calls at $0.0003 each past the free… $9 one-time, pay with USDT (TRC20).">
+<link rel="canonical" href="https://priced-pain-finder.pages.dev/product/mcp-setup-kit/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Priced Pain Finder">
+<meta property="og:title" content="MCP Setup Kit — $9 one-time">
+<meta property="og:description" content="Four free MCP servers for Claude Code — $0 per call, no hosted gateway.">
+<meta property="og:url" content="https://priced-pain-finder.pages.dev/product/mcp-setup-kit/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MCP Setup Kit — $9 one-time">
+<meta name="twitter:description" content="Four free MCP servers for Claude Code — $0 per call, no hosted gateway.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "MCP Setup Kit",
+  "description": "Four free MCP servers for Claude Code — $0 per call, no hosted gateway.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priced Pain Finder"
+  },
+  "category": "Setup",
+  "url": "https://priced-pain-finder.pages.dev/product/mcp-setup-kit/",
+  "version": "0.1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": 9,
+    "availability": "https://schema.org/InStock",
+    "url": "https://priced-pain-finder.pages.dev/product/mcp-setup-kit/",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner"><a class="wordmark" href="/">Priced Pain <span>Finder</span></a><nav class="nav-links" aria-label="Main"><a href="/#skills">Skills</a><a class="hide-sm" href="/#how-it-works">How it works</a><a class="hide-sm" href="/#faq">FAQ</a><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram</a></nav></div></header>
+<main class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#skills">Skills</a> / Setup / MCP Setup Kit</p>
+<div class="product-head">
+<div>
+<span class="eyebrow">Claude Code skill</span>
+<h1>MCP Setup Kit</h1>
+<p class="lede" style="font-size:19px;color:var(--muted)">Four free MCP servers for Claude Code — $0 per call, no hosted gateway.</p>
+<div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Setup</span><span class="tag">v0.1.0</span><span class="tag">MIT licence</span></div>
+</div>
+<aside class="buy-box" aria-label="Buy this skill"><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · no subscription</span></div><p class="small muted">Claude Code skill · v0.1.0 · MIT licence</p><a class="btn" href="#buy">Buy with USDT — $9</a><p class="small"><strong>What you get:</strong> SKILL.md, scripts, skill.yaml, LICENSE + README.md. Download link delivered after payment is verified.</p><p class="small muted">No card checkout. No account needed. Payment is a manual USDT transfer — see the steps below.</p></aside>
+</div>
+
+<section class="reveal"><h2>The problem</h2><p>Hosted MCP gateways meter every tool call. Composio Pro is $29/month with tool calls at $0.0003 each past the free allowance, and its 2026 switch to usage-based billing drew criticism for large cost increases at production volume. Arcade&#x27;s Team plan is $25/month plus $0.01 per tool call. Smithery charged $10/month for hosted MCP — then shut the hosted service down on October 31, 2026. Paid MCP servers on the market run $19–$149/month. A looping agent multiplies every per-call price.</p></section>
+
+<section class="reveal"><h2>What it does</h2><ul class="checklist"><li>Wires four free MCP servers that run on your own machine for $0 per call — Context7 (library docs), Playwright (browser), GitHub (repos, issues, PRs), Filesystem (one folder you choose) — with one .mcp.json config file.</li><li>Verifies every server before you open Claude Code — a self-check script validates the JSON, confirms each command is on PATH, flags placeholder tokens, and confirms the filesystem folder exists; exit 0 means ready.</li><li>Caps per-call spend before it bills — a per-tool cost ledger (record/status, exit code 2 on a cap hit) for the day you add a billed server, with example caps from verified November 2026 per-call prices (Exa search $0.007/call, Reddit reads $0.0015/read).</li><li>Names when hosted MCP is still worth paying for — shared OAuth, audit logs, per-user permissions, or a tool that only exists as a hosted endpoint.</li></ul></section>
+
+<section class="reveal"><h2>What&rsquo;s inside</h2><ul class="checklist"><li>SKILL.md — the skill: install steps, verification, cost caps, honest limits.</li><li>skill.yaml — skill metadata (name mcp-setup-kit, version 0.1.0).</li><li>scripts/mcp_setup_check.py — validates .mcp.json: JSON, commands on PATH, tokens, folders, placeholders.</li><li>scripts/mcp_cost_cap.py — per-tool cost ledger: record and status, exit code 2 on a cap hit.</li><li>examples/.mcp.json — ready-to-copy config for the four free servers.</li><li>examples/.mcp.json.broken — broken config used to prove the checker catches real mistakes.</li><li>examples/cost_caps.json — example monthly caps with verified November 2026 per-call prices.</li><li>LICENSE — MIT.</li><li>README.md — product page text with worked examples.</li></ul>
+<p class="small muted">Stdlib-only Python. No network, no credentials, except the MCP Setup Kit, which needs a free read-only GitHub token for the GitHub server. Install: copy the folder into <code class="inline">~/.claude/skills/</code> and ask Claude Code to use it.</p></section>
+
+<section class="reveal"><h2>Worked example &mdash; real output</h2><p class="example">The fixture config in examples/.mcp.json was checked on November 25, 2026 (Node v24.22.1, Python 3.12.3). As shipped it contains a placeholder token, and the checker catches it: &#x27;FAIL: env var GITHUB_PERSONAL_ACCESS_TOKEN is not set&#x27;, &#x27;FAIL: placeholder left in env.GITHUB_PERSONAL_ACCESS_TOKEN&#x27; — Result: 4 server(s), 2 failure(s), 0 warning(s), NOT READY. With a real token set, the same config passes: 4 server(s), 0 failure(s), 0 warning(s), READY. A deliberately broken config fails exactly where it should: 4 failure(s) — no command, missing folder, nonexistent binary, missing token. The cost-cap ledger: 100 Exa searches recorded at $0.007/call = $0.7000 of a $5.00 cap (14%); recording 700 more hits $5.6000 of $5.00 — &#x27;CAP HIT: exa-search reached $5.6000 of $5.00 — stop using this tool until next month or raise the cap deliberately.&#x27;</p>
+<p class="small muted">This is the output of the included script on the stated inputs, not a promise for your setup. Your numbers will differ; the skill prices yours.</p></section>
+
+<section class="reveal"><h2>Honest limits</h2><ul class="limits"><li>This kit wires four local servers. It does not replace a managed gateway&#x27;s OAuth, audit logs, team permissions, or uptime SLA.</li><li>The check script verifies config, binaries, tokens, and folders. It cannot prove a server will answer correctly, and it cannot verify remote (HTTP) servers&#x27; auth or billing — those are flagged as warnings.</li><li>The cost ledger only knows what you record. It cannot see real vendor billing, and a cap that is never recorded against is no cap at all.</li><li>The four servers are free to run. Claude Code itself is a paid product, and the GitHub API has its own free-tier rate limits. The kit needs Node.js 18+ with npx and Python 3.9+ for the check script.</li><li>Prices were checked November 25, 2026; MCP pricing changes fast — verify the live pricing page before budgeting. The complaint evidence is second-hand via independent review sites documenting the repricing criticism — no verbatim Reddit user quote of the form &#x27;I pay $X for MCP and still…&#x27; was found, and this kit does not claim otherwise.</li><li>This skill saves the hosted-gateway subscription. It does not guarantee any saving and it never executes a payment.</li></ul></section>
+
+<section id="buy" class="reveal"><h2>Buy with USDT</h2><p>There is no card checkout on this store. Buying is a manual transfer, in four steps:</p><ol class="buy-steps"><li><strong>Send 9 USDT (TRC20)</strong> to this wallet address:</li></ol><div class="wallet"><code>TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez</code><button type="button" data-copy="TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez">Copy address</button></div><ol class="buy-steps" start="2"><li><strong>Send the transaction hash</strong> by Instagram DM to <a href="https://www.instagram.com/agent2027boutique" rel="noopener">@agent2027boutique</a>.</li><li><strong>We verify the hash on-chain</strong> (Tron network, TRC20).</li><li><strong>The download link is sent back</strong> to you in the same Instagram DM.</li></ol><p class="small muted">Send exactly 9 USDT on the TRC20 network. Sending on the wrong network, or a different amount, cannot be verified the same way — double-check the address before you send. Once the download link has been delivered, the sale is final: it is a digital file, so it cannot be returned.</p></section>
+
+<section class="reveal"><h2>You may also need</h2><div class="grid related"><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/actions-cost-cutter/">Actions Cost Cutter</a></h3><p class="problem">Cut your GitHub Actions bill before you pay it.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/copilot-credit-guard/">Copilot Credit Guard</a></h3><p class="problem">Stop burning your GitHub Copilot allowance.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/cursor-bill-guard/">Cursor Bill Guard</a></h3><p class="problem">Stop your $20 Cursor Pro plan becoming a $1,400 hour.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article></div></section>
+</main>
+<footer><div class="wrap foot-grid"><div><p><strong>Priced Pain Finder</strong><br>Claude Code skills, priced by the pain they kill.<br>Every skill $9 one-time. Pay with USDT (TRC20).</p></div><div><p><a href="/#skills">All skills</a><br><a href="/#how-it-works">How buying works</a><br><a href="/#faq">FAQ</a></p></div><div><p><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram: @agent2027boutique</a><br><span class="small">Questions or a payment hash? Send it by Instagram DM.</span></p></div></div><div class="wrap"><p class="small">All skills version 0.1.0, MIT licence. Prices inside the skills are snapshots read in November 2026 — verify current rates before relying on them. No skill guarantees a saving. This store makes no earnings claims.</p></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

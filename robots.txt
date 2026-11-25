@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://priced-pain-finder.pages.dev/sitemap.xml

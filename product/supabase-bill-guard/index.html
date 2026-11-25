@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supabase Bill Guard — Claude Code skill · $9 one-time · Priced Pain Finder</title>
+<meta name="description" content="Stop the $25 Pro plan turning into a $100+ bill. Supabase Pro costs $25/month. Until it doesn&#x27;t. Every project bills its own compute 24/7, and egress, disk, storage and… $9 one-time, pay with USDT (TRC20).">
+<link rel="canonical" href="https://priced-pain-finder.pages.dev/product/supabase-bill-guard/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Priced Pain Finder">
+<meta property="og:title" content="Supabase Bill Guard — $9 one-time">
+<meta property="og:description" content="Stop the $25 Pro plan turning into a $100+ bill.">
+<meta property="og:url" content="https://priced-pain-finder.pages.dev/product/supabase-bill-guard/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Supabase Bill Guard — $9 one-time">
+<meta name="twitter:description" content="Stop the $25 Pro plan turning into a $100+ bill.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Supabase Bill Guard",
+  "description": "Stop the $25 Pro plan turning into a $100+ bill.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priced Pain Finder"
+  },
+  "category": "Billing",
+  "url": "https://priced-pain-finder.pages.dev/product/supabase-bill-guard/",
+  "version": "0.1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": 9,
+    "availability": "https://schema.org/InStock",
+    "url": "https://priced-pain-finder.pages.dev/product/supabase-bill-guard/",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner"><a class="wordmark" href="/">Priced Pain <span>Finder</span></a><nav class="nav-links" aria-label="Main"><a href="/#skills">Skills</a><a class="hide-sm" href="/#how-it-works">How it works</a><a class="hide-sm" href="/#faq">FAQ</a><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram</a></nav></div></header>
+<main class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#skills">Skills</a> / Billing / Supabase Bill Guard</p>
+<div class="product-head">
+<div>
+<span class="eyebrow">Claude Code skill</span>
+<h1>Supabase Bill Guard</h1>
+<p class="lede" style="font-size:19px;color:var(--muted)">Stop the $25 Pro plan turning into a $100+ bill.</p>
+<div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Billing</span><span class="tag">v0.1.0</span><span class="tag">MIT licence</span></div>
+</div>
+<aside class="buy-box" aria-label="Buy this skill"><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · no subscription</span></div><p class="small muted">Claude Code skill · v0.1.0 · MIT licence</p><a class="btn" href="#buy">Buy with USDT — $9</a><p class="small"><strong>What you get:</strong> SKILL.md, scripts, skill.yaml, LICENSE + README.md. Download link delivered after payment is verified.</p><p class="small muted">No card checkout. No account needed. Payment is a manual USDT transfer — see the steps below.</p></aside>
+</div>
+
+<section class="reveal"><h2>The problem</h2><p>Supabase Pro costs $25/month. Until it doesn&#x27;t. Every project bills its own compute 24/7, and egress, disk, storage and auth MAU meter on top. A solo dev on Pro at $25/month cancelled — and was still charged $22.85 that night for compute on 4 idle projects. Support&#x27;s answer: &#x27;We charge in hindsight.&#x27; A November 2026 complaint scan (17 signals, Trustpilot + Reddit) reports users charged $300+ when expecting $25/month for &#x27;ghost compute&#x27;, and Pro users getting bills of $100–300+ from egress, compute or storage overages. A Threads user posted a Supabase invoice totalling $164.52 in November 2026. The trap: the Spend Cap is on by default on Pro — but it does not cover compute, PITR or log drains. The bill can keep growing while the cap is on.</p></section>
+
+<section class="reveal"><h2>What it does</h2><ul class="checklist"><li>Audits — copy 8 numbers per project from your Supabase dashboard (Usage page + Upcoming Invoice). No API key, no credentials, nothing leaves your machine.</li><li>Projects — a tested Python script turns the snapshot into a projected month-end bill, line by line, with flow meters projected from the day of the cycle.</li><li>Fixes cheapest first — idle projects, egress, oversized compute tiers, PITR ($100/mo) and log drains ($60/mo each) ranked by estimated monthly saving.</li><li>Names the Spend Cap gap — the cap is on by default on Pro but does not cover compute, PITR or log drains; the estimate shows exactly how much bills even with the cap on.</li></ul></section>
+
+<section class="reveal"><h2>What&rsquo;s inside</h2><ul class="checklist"><li>SKILL.md — the full skill: audit steps, drivers table, fixes, guardrails.</li><li>skill.yaml — skill metadata (name, version, description, keywords).</li><li>scripts/supabase_bill_guard.py — stdlib-only Python estimator (estimate / --json). No API key, no account access, no network.</li><li>examples/usage-snapshot.json — realistic 3-project fixture used in the worked example.</li><li>README.md — product page text with worked examples and the verified pricing table.</li><li>LICENSE — MIT.</li></ul>
+<p class="small muted">Stdlib-only Python. No network, no credentials. Install: copy the folder into <code class="inline">~/.claude/skills/</code> and ask Claude Code to use it.</p></section>
+
+<section class="reveal"><h2>Worked example &mdash; real output</h2><p class="example">Fixture: a Pro org on day 12 of 30 — prod on Medium compute with 12 GB disk, a staging project on Micro, and a forgotten old-experiment project nobody uses. Projected month-end bill: Pro plan base $25.00, compute prod (Medium) $60.00, disk overage prod $0.50, compute staging (Micro) $10.00, compute old-experiment (Micro) $10.00, egress overage (projected) $13.05, compute credit -$10.00 — PROJECTED TOTAL $108.55. That is $83.55 OVER the $25 Pro sticker price — 4.3x the headline. Warnings: idle project old-experiment still pays $10.00/mo for compute; Spend Cap gap — $70.00/mo of this estimate bills even with the cap on. Cheapest fixes first: cut egress ($13.05/mo at stake), pause or delete idle project old-experiment ($10.00/mo). All fixes applied: up to $23.05/mo at stake. More tests, all passing: clean single Micro project on day 20 projects $25.00 exactly; large tier + PITR + 2 log drains on day 5 projects $347.75 with 3 fixes worth $270/mo.</p>
+<p class="small muted">This is the output of the included script on the stated inputs, not a promise for your setup. Your numbers will differ; the skill prices yours.</p></section>
+
+<section class="reveal"><h2>Honest limits</h2><ul class="limits"><li>This is an estimate from the numbers you paste in, using published November 2026 rates. It is not your invoice. Supabase&#x27;s Upcoming Invoice on the Billing page is the authority; taxes, credits, billing-cycle timing and later pricing changes are not modelled.</li><li>The script cannot see your real billing or your dashboard and never calls the Supabase API — no credentials needed, nothing secret leaves your machine.</li><li>Early-month projections are rough forecasts: traffic spikes and bots move egress and MAU faster than a straight line. Re-run weekly.</li><li>It reduces surprise bills. It does not guarantee any saving, never executes a payment, and cannot pause, delete or downgrade anything for you — those clicks are yours, deliberately.</li><li>Pricing used (verified 2026-11-25): Pro $25/mo + $10 compute credit (one Micro); compute Micro $10, Small $15, Medium $60, Large $110, XL $210 up to 16XL $3,730; disk 8 GB included then $0.125/GB; egress 250 GB then $0.09/GB; MAU 100,000 then $0.00325 each; PITR $100/mo, log drains $60/mo each. Re-check supabase.com/pricing before relying on these rates.</li></ul></section>
+
+<section id="buy" class="reveal"><h2>Buy with USDT</h2><p>There is no card checkout on this store. Buying is a manual transfer, in four steps:</p><ol class="buy-steps"><li><strong>Send 9 USDT (TRC20)</strong> to this wallet address:</li></ol><div class="wallet"><code>TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez</code><button type="button" data-copy="TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez">Copy address</button></div><ol class="buy-steps" start="2"><li><strong>Send the transaction hash</strong> by Instagram DM to <a href="https://www.instagram.com/agent2027boutique" rel="noopener">@agent2027boutique</a>.</li><li><strong>We verify the hash on-chain</strong> (Tron network, TRC20).</li><li><strong>The download link is sent back</strong> to you in the same Instagram DM.</li></ol><p class="small muted">Send exactly 9 USDT on the TRC20 network. Sending on the wrong network, or a different amount, cannot be verified the same way — double-check the address before you send. Once the download link has been delivered, the sale is final: it is a digital file, so it cannot be returned.</p></section>
+
+<section class="reveal"><h2>You may also need</h2><div class="grid related"><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/actions-cost-cutter/">Actions Cost Cutter</a></h3><p class="problem">Cut your GitHub Actions bill before you pay it.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/copilot-credit-guard/">Copilot Credit Guard</a></h3><p class="problem">Stop burning your GitHub Copilot allowance.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/cursor-bill-guard/">Cursor Bill Guard</a></h3><p class="problem">Stop your $20 Cursor Pro plan becoming a $1,400 hour.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article></div></section>
+</main>
+<footer><div class="wrap foot-grid"><div><p><strong>Priced Pain Finder</strong><br>Claude Code skills, priced by the pain they kill.<br>Every skill $9 one-time. Pay with USDT (TRC20).</p></div><div><p><a href="/#skills">All skills</a><br><a href="/#how-it-works">How buying works</a><br><a href="/#faq">FAQ</a></p></div><div><p><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram: @agent2027boutique</a><br><span class="small">Questions or a payment hash? Send it by Instagram DM.</span></p></div></div><div class="wrap"><p class="small">All skills version 0.1.0, MIT licence. Prices inside the skills are snapshots read in November 2026 — verify current rates before relying on them. No skill guarantees a saving. This store makes no earnings claims.</p></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

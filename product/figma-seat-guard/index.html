@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figma Seat Guard — Claude Code skill · $9 one-time · Priced Pain Finder</title>
+<meta name="description" content="Stop paying for Figma seats nobody uses. Figma bills per paid seat, and a seat can be added without an admin ever approving it. In October 2026 a user on the… $9 one-time, pay with USDT (TRC20).">
+<link rel="canonical" href="https://priced-pain-finder.pages.dev/product/figma-seat-guard/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Priced Pain Finder">
+<meta property="og:title" content="Figma Seat Guard — $9 one-time">
+<meta property="og:description" content="Stop paying for Figma seats nobody uses.">
+<meta property="og:url" content="https://priced-pain-finder.pages.dev/product/figma-seat-guard/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Figma Seat Guard — $9 one-time">
+<meta name="twitter:description" content="Stop paying for Figma seats nobody uses.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Figma Seat Guard",
+  "description": "Stop paying for Figma seats nobody uses.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priced Pain Finder"
+  },
+  "category": "Cost guard",
+  "url": "https://priced-pain-finder.pages.dev/product/figma-seat-guard/",
+  "version": "0.1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": 9,
+    "availability": "https://schema.org/InStock",
+    "url": "https://priced-pain-finder.pages.dev/product/figma-seat-guard/",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner"><a class="wordmark" href="/">Priced Pain <span>Finder</span></a><nav class="nav-links" aria-label="Main"><a href="/#skills">Skills</a><a class="hide-sm" href="/#how-it-works">How it works</a><a class="hide-sm" href="/#faq">FAQ</a><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram</a></nav></div></header>
+<main class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#skills">Skills</a> / Cost guard / Figma Seat Guard</p>
+<div class="product-head">
+<div>
+<span class="eyebrow">Claude Code skill</span>
+<h1>Figma Seat Guard</h1>
+<p class="lede" style="font-size:19px;color:var(--muted)">Stop paying for Figma seats nobody uses.</p>
+<div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span><span class="tag">v0.1.0</span><span class="tag">MIT licence</span></div>
+</div>
+<aside class="buy-box" aria-label="Buy this skill"><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · no subscription</span></div><p class="small muted">Claude Code skill · v0.1.0 · MIT licence</p><a class="btn" href="#buy">Buy with USDT — $9</a><p class="small"><strong>What you get:</strong> SKILL.md, scripts, skill.yaml, LICENSE + README.md. Download link delivered after payment is verified.</p><p class="small muted">No card checkout. No account needed. Payment is a manual USDT transfer — see the steps below.</p></aside>
+</div>
+
+<section class="reveal"><h2>The problem</h2><p>Figma bills per paid seat, and a seat can be added without an admin ever approving it. In October 2026 a user on the Figma Community forum was hit with a &#x27;Billing adjustments – additional Seat updates $15.48&#x27; charge because opening a file that needed a higher seat type upgraded their Collab seat to a Full seat. In another forum thread, Figma&#x27;s own support team confirmed new editors are charged after they start interacting with a design file — and that a team would otherwise be billed for all 32 seats on its list. A November 2026 Threads post shows the same pattern in real numbers: a third Full seat for &#x27;Barry&#x27; at $16, a $36 one-time charge, a $40 renewal. Guides tracking the complaints report users hit with bills of hundreds to $1,000s+ from this one behaviour, and over 100 Trustpilot complaints about confusing Figma billing.</p></section>
+
+<section class="reveal"><h2>What it does</h2><ul class="checklist"><li>Audits your member list — reads a CSV you export from Admin &gt; Members and flags every paid seat that is not earning its price.</li><li>Catches auto-upgrades — flags Full seats that were upgraded from free View seats, the exact trap in the forum complaints.</li><li>Finds dead seats — any paid seat with no file opened in 90 days and zero edits.</li><li>Estimates the waste in dollars — monthly and yearly totals from Figma&#x27;s published November 2026 seat prices (Professional Full $20/mo monthly / $16 annual, Dev $15/$12, Collab $5/$3; Organization Full $55; Enterprise Full $90; View free).</li><li>Stops it recurring — step-by-step: default seat to Viewer-Restricted, seat approval to manual, upgrade email notifications on, and a monthly 10-minute re-audit routine.</li></ul></section>
+
+<section class="reveal"><h2>What&rsquo;s inside</h2><ul class="checklist"><li>SKILL.md — the full skill: seat prices, export steps, audit, downgrade steps, the seat-change routine.</li><li>skill.yaml — skill metadata (name, version 0.1.0, description).</li><li>scripts/figma_seat_guard.py — stdlib-only Python auditor (audit / prices commands).</li><li>examples/members-example.csv — the 12-member fixture used in the worked example.</li><li>LICENSE — MIT.</li><li>README.md — product page text with worked examples and complaint sources.</li></ul>
+<p class="small muted">Stdlib-only Python. No network, no credentials. Install: copy the folder into <code class="inline">~/.claude/skills/</code> and ask Claude Code to use it.</p></section>
+
+<section class="reveal"><h2>Worked example &mdash; real output</h2><p class="example">The included fixture is a realistic 12-person team on Professional monthly billing (6 Full, 2 Dev, 2 Collab, 2 View). Actual output from running the script on 25 November 2026: Members audited: 12. Current monthly cost: $160. Confirmed waste: $60/month ($720/year). Needs review: $20/month (up to $240/year more). Waste: Carla Diaz — Full seat, $20/mo, last opened 120d ago, 0 edits/90d; Dan Kim — Full seat, $20/mo, last opened 95d ago, 0 edits/90d; Gina Park — Dev seat, $15/mo, last opened 110d ago, 0 edits/90d; Ivy Chen — Collab seat, $5/mo, last opened 100d ago, 0 edits/90d. Review: Eva Novak — Full seat, $20/mo, upgraded from a free View seat, 1 edit/90d. The same fixture on annual billing: $126/mo cost, $47/mo waste ($564/year). On Organization annual: $390/mo cost, $140/mo waste ($1,680/year). The math was hand-checked: 6 × $20 + 2 × $15 + 2 × $5 = $160; waste $20 + $20 + $15 + $5 = $60.</p>
+<p class="small muted">This is the output of the included script on the stated inputs, not a promise for your setup. Your numbers will differ; the skill prices yours.</p></section>
+
+<section class="reveal"><h2>Honest limits</h2><ul class="limits"><li>The skill audits a member list you export by hand. It does not connect to Figma, cannot see your real billing or invoices, and cannot change any seat for you — every downgrade is a click you make in Figma.</li><li>The 90-day inactivity rule is a heuristic. A designer on leave will look like waste — always check with the person before downgrading.</li><li>Prices are Figma&#x27;s published November 2026 prices, baked into the script. Figma changed its seat model on 11 March 2025 (the old &#x27;$15/editor&#x27; price is retired); verify current prices at figma.com/pricing and update the PRICES table when they change.</li><li>Downgrading stops future charges; it does not refund past ones. Figma states it will not issue prorated refunds for downgrades, though support has removed mistaken charges as a courtesy in the cases cited above — worth asking, not guaranteed.</li><li>This skill finds wasted seats. It does not guarantee any saving: your real saving depends on your plan, billing cycle, and whether downgraded seats are reassigned.</li></ul></section>
+
+<section id="buy" class="reveal"><h2>Buy with USDT</h2><p>There is no card checkout on this store. Buying is a manual transfer, in four steps:</p><ol class="buy-steps"><li><strong>Send 9 USDT (TRC20)</strong> to this wallet address:</li></ol><div class="wallet"><code>TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez</code><button type="button" data-copy="TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez">Copy address</button></div><ol class="buy-steps" start="2"><li><strong>Send the transaction hash</strong> by Instagram DM to <a href="https://www.instagram.com/agent2027boutique" rel="noopener">@agent2027boutique</a>.</li><li><strong>We verify the hash on-chain</strong> (Tron network, TRC20).</li><li><strong>The download link is sent back</strong> to you in the same Instagram DM.</li></ol><p class="small muted">Send exactly 9 USDT on the TRC20 network. Sending on the wrong network, or a different amount, cannot be verified the same way — double-check the address before you send. Once the download link has been delivered, the sale is final: it is a digital file, so it cannot be returned.</p></section>
+
+<section class="reveal"><h2>You may also need</h2><div class="grid related"><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/actions-cost-cutter/">Actions Cost Cutter</a></h3><p class="problem">Cut your GitHub Actions bill before you pay it.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/copilot-credit-guard/">Copilot Credit Guard</a></h3><p class="problem">Stop burning your GitHub Copilot allowance.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/cursor-bill-guard/">Cursor Bill Guard</a></h3><p class="problem">Stop your $20 Cursor Pro plan becoming a $1,400 hour.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article></div></section>
+</main>
+<footer><div class="wrap foot-grid"><div><p><strong>Priced Pain Finder</strong><br>Claude Code skills, priced by the pain they kill.<br>Every skill $9 one-time. Pay with USDT (TRC20).</p></div><div><p><a href="/#skills">All skills</a><br><a href="/#how-it-works">How buying works</a><br><a href="/#faq">FAQ</a></p></div><div><p><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram: @agent2027boutique</a><br><span class="small">Questions or a payment hash? Send it by Instagram DM.</span></p></div></div><div class="wrap"><p class="small">All skills version 0.1.0, MIT licence. Prices inside the skills are snapshots read in November 2026 — verify current rates before relying on them. No skill guarantees a saving. This store makes no earnings claims.</p></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

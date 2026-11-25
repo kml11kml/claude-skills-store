@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Actions Cost Cutter — Claude Code skill · $9 one-time · Priced Pain Finder</title>
+<meta name="description" content="Cut your GitHub Actions bill before you pay it. A developer posted a year of GitHub Actions metered usage climbing from $0.04/month in January to $109.68 in November… $9 one-time, pay with USDT (TRC20).">
+<link rel="canonical" href="https://priced-pain-finder.pages.dev/product/actions-cost-cutter/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Priced Pain Finder">
+<meta property="og:title" content="Actions Cost Cutter — $9 one-time">
+<meta property="og:description" content="Cut your GitHub Actions bill before you pay it.">
+<meta property="og:url" content="https://priced-pain-finder.pages.dev/product/actions-cost-cutter/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Actions Cost Cutter — $9 one-time">
+<meta name="twitter:description" content="Cut your GitHub Actions bill before you pay it.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Actions Cost Cutter",
+  "description": "Cut your GitHub Actions bill before you pay it.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priced Pain Finder"
+  },
+  "category": "Cost guard",
+  "url": "https://priced-pain-finder.pages.dev/product/actions-cost-cutter/",
+  "version": "0.1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": 9,
+    "availability": "https://schema.org/InStock",
+    "url": "https://priced-pain-finder.pages.dev/product/actions-cost-cutter/",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner"><a class="wordmark" href="/">Priced Pain <span>Finder</span></a><nav class="nav-links" aria-label="Main"><a href="/#skills">Skills</a><a class="hide-sm" href="/#how-it-works">How it works</a><a class="hide-sm" href="/#faq">FAQ</a><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram</a></nav></div></header>
+<main class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#skills">Skills</a> / Cost guard / Actions Cost Cutter</p>
+<div class="product-head">
+<div>
+<span class="eyebrow">Claude Code skill</span>
+<h1>Actions Cost Cutter</h1>
+<p class="lede" style="font-size:19px;color:var(--muted)">Cut your GitHub Actions bill before you pay it.</p>
+<div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span><span class="tag">v0.1.0</span><span class="tag">MIT licence</span></div>
+</div>
+<aside class="buy-box" aria-label="Buy this skill"><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · no subscription</span></div><p class="small muted">Claude Code skill · v0.1.0 · MIT licence</p><a class="btn" href="#buy">Buy with USDT — $9</a><p class="small"><strong>What you get:</strong> SKILL.md, scripts, skill.yaml, LICENSE. Download link delivered after payment is verified.</p><p class="small muted">No card checkout. No account needed. Payment is a manual USDT transfer — see the steps below.</p></aside>
+</div>
+
+<section class="reveal"><h2>The problem</h2><p>A developer posted a year of GitHub Actions metered usage climbing from $0.04/month in January to $109.68 in November 2026 and asked, &quot;What&#x27;s the solution for this? Github Actions really getting expensive.&quot; The rate behind it: a macOS minute costs $0.062 — 10.3x a Linux minute at $0.006 — and 5,000 macOS minutes a month is $310. A GitHub Team plan&#x27;s $18 of included compute covers 3,000 Linux minutes but only about 290 macOS minutes.</p></section>
+
+<section class="reveal"><h2>What it does</h2><ul class="checklist"><li>Prices a month of runner minutes at GitHub&#x27;s published rates (read 2026-11-12) and applies the plan allowance ($12 Free, $18 Pro/Team, $300 Enterprise Cloud) to show the real overage — the actual bill.</li><li>Audits .github/workflows/*.yml for 10 waste patterns: macOS runners, missing path filters, no concurrency cancel, no dependency cache, full clones, no timeout, 90-day artifact retention, sub-hourly cron schedules, macOS matrix legs, Windows runners.</li><li>Applies fixes in saving order: split macOS jobs to Linux, slow down schedules, add path filters and concurrency, add caching, cap timeouts and retention.</li><li>Re-prices the new minute mix and reports before vs after in dollars.</li></ul></section>
+
+<section class="reveal"><h2>What&rsquo;s inside</h2><ul class="checklist"><li>SKILL.md — the skill itself: rates table, the 4-step workflow, the 10 audit rules, the fix order.</li><li>skill.yaml — skill metadata (name, version 0.1.0, description).</li><li>scripts/actions_cost.py — stdlib-only Python. `estimate` prices a month; `audit` scans workflows. No network, no credentials.</li><li>LICENSE — MIT.</li></ul>
+<p class="small muted">Stdlib-only Python. No network, no credentials. Install: copy the folder into <code class="inline">~/.claude/skills/</code> and ask Claude Code to use it.</p></section>
+
+<section class="reveal"><h2>Worked example &mdash; real output</h2><p class="example">A build job running 25 minutes on macos-latest, 40 runs a month — 1,000 macOS minutes on a Team plan. Before: gross $62.00, overage (your bill) $44.00. The audit found 18 findings (3 high, 8 medium, 7 low), led by the macOS runner and a cron firing every 30 minutes (1,440 runs a month). After the fix — lint and tests moved to Linux, only the Apple-platform build kept on macOS (800 Linux + 200 macOS minutes): gross $17.20, overage $0.00. That is $44.80 a month of gross spend removed and the whole overage gone — from one workflow split. Your repo&#x27;s numbers will differ; the skill prices yours, not this example&#x27;s.</p>
+<p class="small muted">This is the output of the included script on the stated inputs, not a promise for your setup. Your numbers will differ; the skill prices yours.</p></section>
+
+<section class="reveal"><h2>Honest limits</h2><ul class="limits"><li>The estimator prices minutes you give it. It cannot read GitHub billing and cannot see your real invoice.</li><li>Rates are GitHub&#x27;s published rates read 2026-11-12. GitHub changes them; verify before relying on them.</li><li>Public repositories are free on standard runners — this skill is for private repositories and larger runners.</li><li>Self-hosted runners carry no GitHub per-minute charge, but the machines themselves still cost money; the skill does not price that side.</li><li>The skill cuts a CI bill. It does not guarantee any saving and it never changes billing settings or spends money.</li><li>No earnings are promised. The $44.00 example is the output of the included script on the stated minute counts, not a promise for your repo.</li></ul></section>
+
+<section id="buy" class="reveal"><h2>Buy with USDT</h2><p>There is no card checkout on this store. Buying is a manual transfer, in four steps:</p><ol class="buy-steps"><li><strong>Send 9 USDT (TRC20)</strong> to this wallet address:</li></ol><div class="wallet"><code>TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez</code><button type="button" data-copy="TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez">Copy address</button></div><ol class="buy-steps" start="2"><li><strong>Send the transaction hash</strong> by Instagram DM to <a href="https://www.instagram.com/agent2027boutique" rel="noopener">@agent2027boutique</a>.</li><li><strong>We verify the hash on-chain</strong> (Tron network, TRC20).</li><li><strong>The download link is sent back</strong> to you in the same Instagram DM.</li></ol><p class="small muted">Send exactly 9 USDT on the TRC20 network. Sending on the wrong network, or a different amount, cannot be verified the same way — double-check the address before you send. Once the download link has been delivered, the sale is final: it is a digital file, so it cannot be returned.</p></section>
+
+<section class="reveal"><h2>You may also need</h2><div class="grid related"><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/copilot-credit-guard/">Copilot Credit Guard</a></h3><p class="problem">Stop burning your GitHub Copilot allowance.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/cursor-bill-guard/">Cursor Bill Guard</a></h3><p class="problem">Stop your $20 Cursor Pro plan becoming a $1,400 hour.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Billing</span></div><h3><a href="/product/vercel-bill-guard/">Vercel Bill Guard</a></h3><p class="problem">Stop your $20 Pro plan becoming a $602 bill.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article></div></section>
+</main>
+<footer><div class="wrap foot-grid"><div><p><strong>Priced Pain Finder</strong><br>Claude Code skills, priced by the pain they kill.<br>Every skill $9 one-time. Pay with USDT (TRC20).</p></div><div><p><a href="/#skills">All skills</a><br><a href="/#how-it-works">How buying works</a><br><a href="/#faq">FAQ</a></p></div><div><p><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram: @agent2027boutique</a><br><span class="small">Questions or a payment hash? Send it by Instagram DM.</span></p></div></div><div class="wrap"><p class="small">All skills version 0.1.0, MIT licence. Prices inside the skills are snapshots read in November 2026 — verify current rates before relying on them. No skill guarantees a saving. This store makes no earnings claims.</p></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

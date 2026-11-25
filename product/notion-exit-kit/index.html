@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notion Exit Kit — Claude Code skill · $9 one-time · Priced Pain Finder</title>
+<meta name="description" content="Leave Notion without losing your databases. You pay $10–$20 per seat every month for Notion. You press Export, you get a zip — and your workspace doesn&#x27;t come with… $9 one-time, pay with USDT (TRC20).">
+<link rel="canonical" href="https://priced-pain-finder.pages.dev/product/notion-exit-kit/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Priced Pain Finder">
+<meta property="og:title" content="Notion Exit Kit — $9 one-time">
+<meta property="og:description" content="Leave Notion without losing your databases.">
+<meta property="og:url" content="https://priced-pain-finder.pages.dev/product/notion-exit-kit/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notion Exit Kit — $9 one-time">
+<meta name="twitter:description" content="Leave Notion without losing your databases.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Notion Exit Kit",
+  "description": "Leave Notion without losing your databases.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priced Pain Finder"
+  },
+  "category": "Migration",
+  "url": "https://priced-pain-finder.pages.dev/product/notion-exit-kit/",
+  "version": "0.1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": 9,
+    "availability": "https://schema.org/InStock",
+    "url": "https://priced-pain-finder.pages.dev/product/notion-exit-kit/",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner"><a class="wordmark" href="/">Priced Pain <span>Finder</span></a><nav class="nav-links" aria-label="Main"><a href="/#skills">Skills</a><a class="hide-sm" href="/#how-it-works">How it works</a><a class="hide-sm" href="/#faq">FAQ</a><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram</a></nav></div></header>
+<main class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#skills">Skills</a> / Migration / Notion Exit Kit</p>
+<div class="product-head">
+<div>
+<span class="eyebrow">Claude Code skill</span>
+<h1>Notion Exit Kit</h1>
+<p class="lede" style="font-size:19px;color:var(--muted)">Leave Notion without losing your databases.</p>
+<div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Migration</span><span class="tag">v0.1.0</span><span class="tag">MIT licence</span></div>
+</div>
+<aside class="buy-box" aria-label="Buy this skill"><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · no subscription</span></div><p class="small muted">Claude Code skill · v0.1.0 · MIT licence</p><a class="btn" href="#buy">Buy with USDT — $9</a><p class="small"><strong>What you get:</strong> SKILL.md, scripts, skill.yaml, LICENSE. Download link delivered after payment is verified.</p><p class="small muted">No card checkout. No account needed. Payment is a manual USDT transfer — see the steps below.</p></aside>
+</div>
+
+<section class="reveal"><h2>The problem</h2><p>You pay $10–$20 per seat every month for Notion. You press Export, you get a zip — and your workspace doesn&#x27;t come with it. Databases come out as flat CSVs of one view. Relations become plain-text titles. Formulas become frozen numbers. Your board, calendar and timeline views don&#x27;t export at all. Comments aren&#x27;t in the Markdown export. And users who paid for a full year have reported being locked out of their own workspaces when they tried to downgrade. A 10-person team on Business ($20/seat/month billed yearly) pays at least $2,400 a year.</p></section>
+
+<section class="reveal"><h2>What it does</h2><ul class="checklist"><li>Audits your export — reads the real Notion export zip (including the zip-inside-a-zip shape, Export-&lt;id&gt;-Part-1.zip) and inventories pages, databases, rows and relations.</li><li>Rebuilds a clean vault — strips the 32-character Notion ID from every filename and rewrites internal links, so the pages open directly in Obsidian or any Markdown tool.</li><li>Rebuilds your databases in SQLite — one table per database, plus a `pages` table and a `relations` table that links database rows back to the pages they pointed at.</li><li>Tells you what is lost, honestly — a loss report lists views, formula logic, comments and permissions as gone for good, and flags every relation it could not resolve, so nothing fails silently.</li></ul></section>
+
+<section class="reveal"><h2>What&rsquo;s inside</h2><ul class="checklist"><li>SKILL.md — the full step-by-step skill: export, audit, rebuild relations, rebuild views, save formulas, cancel, verify.</li><li>scripts/notion_exit.py — the audit/rebuild script (stdlib only, tested with --selftest). No API key, no account access, no network.</li><li>skill.yaml — skill metadata (name, version 0.1.0, description).</li><li>LICENSE — MIT.</li></ul>
+<p class="small muted">Stdlib-only Python. No network, no credentials. Install: copy the folder into <code class="inline">~/.claude/skills/</code> and ask Claude Code to use it.</p></section>
+
+<section class="reveal"><h2>Worked example &mdash; real output</h2><p class="example">A small test export — 2 pages (Projects, Design) and a Tasks database with 2 rows whose Project column points at the Design page. Real output: Pages: 2, Databases: 1, Rows: 2, Relations resolved: 2, Unresolved: 0. Vault: out/vault. SQLite: out/notion_exit.sqlite. Report: out/loss-report.md. The vault holds clean files — Projects.md links to Design.md, not to &#x27;Design bbbb….md&#x27;. The SQLite database holds the tasks table and a relations table with both rows linked back to the Design page. The loss report reads: what survived — pages 2 (Markdown, links rewritten to clean names), databases 1 with 2 rows now in notion_exit.sqlite, relations resolved back to pages 2. What is lost for good — views (board/calendar/gallery/timeline layouts are rendering instructions, not stored data; only the rows survive), formula and rollup logic (the CSV holds the value the formula computed at export time, not the formula), comments (not in a Markdown &amp; CSV export at all — only in the HTML export), permissions and sharing (a Notion-side setting, does not export).</p>
+<p class="small muted">This is the output of the included script on the stated inputs, not a promise for your setup. Your numbers will differ; the skill prices yours.</p></section>
+
+<section class="reveal"><h2>Honest limits</h2><ul class="limits"><li>It works from the export file. It cannot recover what Notion did not export: views, formula logic, comments (unless you ran the HTML export), permissions, synced-block links.</li><li>It cannot bypass an export disabled by a workspace owner, and it cannot recover other people&#x27;s private pages.</li><li>It does not use the Notion API — there is no export endpoint, and walking the block tree is throttled at about 3 requests per second.</li><li>If a database shows fewer rows than Notion showed, the export was filtered by the view you exported. Switch the current view to an unfiltered table and re-export.</li><li>Notion prices quoted here are public list prices as of November 2026 — verify them on Notion&#x27;s pricing page.</li></ul></section>
+
+<section id="buy" class="reveal"><h2>Buy with USDT</h2><p>There is no card checkout on this store. Buying is a manual transfer, in four steps:</p><ol class="buy-steps"><li><strong>Send 9 USDT (TRC20)</strong> to this wallet address:</li></ol><div class="wallet"><code>TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez</code><button type="button" data-copy="TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez">Copy address</button></div><ol class="buy-steps" start="2"><li><strong>Send the transaction hash</strong> by Instagram DM to <a href="https://www.instagram.com/agent2027boutique" rel="noopener">@agent2027boutique</a>.</li><li><strong>We verify the hash on-chain</strong> (Tron network, TRC20).</li><li><strong>The download link is sent back</strong> to you in the same Instagram DM.</li></ol><p class="small muted">Send exactly 9 USDT on the TRC20 network. Sending on the wrong network, or a different amount, cannot be verified the same way — double-check the address before you send. Once the download link has been delivered, the sale is final: it is a digital file, so it cannot be returned.</p></section>
+
+<section class="reveal"><h2>You may also need</h2><div class="grid related"><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/actions-cost-cutter/">Actions Cost Cutter</a></h3><p class="problem">Cut your GitHub Actions bill before you pay it.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/copilot-credit-guard/">Copilot Credit Guard</a></h3><p class="problem">Stop burning your GitHub Copilot allowance.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/cursor-bill-guard/">Cursor Bill Guard</a></h3><p class="problem">Stop your $20 Cursor Pro plan becoming a $1,400 hour.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article></div></section>
+</main>
+<footer><div class="wrap foot-grid"><div><p><strong>Priced Pain Finder</strong><br>Claude Code skills, priced by the pain they kill.<br>Every skill $9 one-time. Pay with USDT (TRC20).</p></div><div><p><a href="/#skills">All skills</a><br><a href="/#how-it-works">How buying works</a><br><a href="/#faq">FAQ</a></p></div><div><p><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram: @agent2027boutique</a><br><span class="small">Questions or a payment hash? Send it by Instagram DM.</span></p></div></div><div class="wrap"><p class="small">All skills version 0.1.0, MIT licence. Prices inside the skills are snapshots read in November 2026 — verify current rates before relying on them. No skill guarantees a saving. This store makes no earnings claims.</p></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

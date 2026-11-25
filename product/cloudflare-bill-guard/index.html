@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloudflare Bill Guard — Claude Code skill · $9 one-time · Priced Pain Finder</title>
+<meta name="description" content="Stop your $5 Workers plan becoming a $2,129 invoice. Workers Paid costs $5 a month — and that is not a cap. Everything above the included amounts is metered, uncapped, and… $9 one-time, pay with USDT (TRC20).">
+<link rel="canonical" href="https://priced-pain-finder.pages.dev/product/cloudflare-bill-guard/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Priced Pain Finder">
+<meta property="og:title" content="Cloudflare Bill Guard — $9 one-time">
+<meta property="og:description" content="Stop your $5 Workers plan becoming a $2,129 invoice.">
+<meta property="og:url" content="https://priced-pain-finder.pages.dev/product/cloudflare-bill-guard/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cloudflare Bill Guard — $9 one-time">
+<meta name="twitter:description" content="Stop your $5 Workers plan becoming a $2,129 invoice.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Cloudflare Bill Guard",
+  "description": "Stop your $5 Workers plan becoming a $2,129 invoice.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priced Pain Finder"
+  },
+  "category": "Billing",
+  "url": "https://priced-pain-finder.pages.dev/product/cloudflare-bill-guard/",
+  "version": "0.1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": 9,
+    "availability": "https://schema.org/InStock",
+    "url": "https://priced-pain-finder.pages.dev/product/cloudflare-bill-guard/",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap nav-inner"><a class="wordmark" href="/">Priced Pain <span>Finder</span></a><nav class="nav-links" aria-label="Main"><a href="/#skills">Skills</a><a class="hide-sm" href="/#how-it-works">How it works</a><a class="hide-sm" href="/#faq">FAQ</a><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram</a></nav></div></header>
+<main class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/#skills">Skills</a> / Billing / Cloudflare Bill Guard</p>
+<div class="product-head">
+<div>
+<span class="eyebrow">Claude Code skill</span>
+<h1>Cloudflare Bill Guard</h1>
+<p class="lede" style="font-size:19px;color:var(--muted)">Stop your $5 Workers plan becoming a $2,129 invoice.</p>
+<div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Billing</span><span class="tag">v0.1.0</span><span class="tag">MIT licence</span></div>
+</div>
+<aside class="buy-box" aria-label="Buy this skill"><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · no subscription</span></div><p class="small muted">Claude Code skill · v0.1.0 · MIT licence</p><a class="btn" href="#buy">Buy with USDT — $9</a><p class="small"><strong>What you get:</strong> SKILL.md, scripts, skill.yaml, LICENSE + README.md. Download link delivered after payment is verified.</p><p class="small muted">No card checkout. No account needed. Payment is a manual USDT transfer — see the steps below.</p></aside>
+</div>
+
+<section class="reveal"><h2>The problem</h2><p>Workers Paid costs $5 a month — and that is not a cap. Everything above the included amounts is metered, uncapped, and billed per unit. A hobbyist running a non-commercial project on Workers and D1 got a $2,129 bill against an expected budget of ~$20/month — an unindexed GROUP BY query scanned ~877,000 rows to return 30, an unintended loop ran it ~315,000 times, and 1.44 trillion rows were read in a single cycle (October invoice $529.88, November invoice $1,599.12). A budget alert fired once at $37 and did nothing to stop it. After a $953.74 courtesy credit, $645.38 was still due — on top of the $529.88 already paid. A developer posted a ~$35,000 Cloudflare bill for a side project with 81 users — KV writes 3.13B ($15,635), KV reads 16.62B ($8,306), Durable Object storage writes 4.01B ($3,962), KV list operations 574M ($2,870). Bots hammering a public D1 lookup produced a $300 D1 bill in days. The cause: D1 bills rows scanned, not rows returned — and a budget alert is not a brake. Cloudflare shipped real Spend Management on November 13, 2026, but only for Workers and Durable Objects. D1, R2 and KV still have no hard spending cap.</p></section>
+
+<section class="reveal"><h2>What it does</h2><ul class="checklist"><li>Audits the repo before you deploy — finds every wrangler.toml, lists D1/KV/R2 bindings, flags cron triggers (a 1-minute cron is 43,200 invocations a month with zero traffic), and checks schema files for a missing CREATE INDEX.</li><li>Prices the month from your real dashboard usage — Workers requests and CPU time, D1 rows read/written and storage, R2 storage and Class A/B operations, KV reads/writes/deletes/lists and storage — at Cloudflare&#x27;s published November 2026 rates, with R2&#x27;s whole-GB / whole-million rounding applied the way Cloudflare does it.</li><li>Projects the month-end total mid-month — rate meters scale with days, storage levels do not, so a day-10 snapshot becomes a month-end number while there is still time to fix the query.</li><li>Prices any single D1 query — rows scanned per run × runs per day, with the scan amplification that makes D1 bills explode, and a reality check against the real $2,129 invoice.</li><li>Sets the cap that actually stops the meter — the exact Spend Management setup (dashboard path and cf billing spend-policies create command) for Workers and Durable Objects, plus the per-product usage notifications that are the only defence for D1, R2 and KV, which have no hard cap.</li></ul></section>
+
+<section class="reveal"><h2>What&rsquo;s inside</h2><ul class="checklist"><li>SKILL.md — the full skill: billing rules that matter, the 6-step audit/price/project/query/cap workflow.</li><li>scripts/cloudflare_bill_guard.py — stdlib-only Python: audit, estimate, project, d1-scan, d1-check, cap commands. Local, no network, no credentials.</li><li>skill.yaml — skill metadata (name, version 0.1.0, description).</li><li>examples/usage-snapshot.json — the full-month usage fixture used in the worked example.</li><li>examples/wrangler-fixture/wrangler.toml and schema.sql — fixture Worker project for the audit.</li><li>LICENSE — MIT.</li><li>README.md — product page text with worked examples.</li></ul>
+<p class="small muted">Stdlib-only Python. No network, no credentials. Install: copy the folder into <code class="inline">~/.claude/skills/</code> and ask Claude Code to use it.</p></section>
+
+<section class="reveal"><h2>Worked example &mdash; real output</h2><p class="example">A hobby project&#x27;s full month of usage (45M Worker requests, 900B D1 rows read, 40 GB in R2, 40M KV reads), priced by the included script: Workers subtotal $18.50 ($5.00 base + $10.50 requests + $3.00 CPU time), D1 subtotal $875.00 (900B rows read), R2 subtotal $19.35, KV subtotal $22.50 — estimated month total $935.35 (before tax). Dominant driver: D1 subtotal is 94% of the bill. The same usage, seen on day 10 instead of after the invoice, projects to a $2,884.05 month-end total. One query, priced before it ships — the pattern from the $2,129 post-mortem (877,000 rows scanned to return 30, 10,500 runs a day): 315,000 runs/month, 276,255,000,000 rows read/month, scan amplification 29,233x, D1 rows-read cost $251.25/month (plus the $5 Workers base). Checked against the real invoice, the script prices the reported 1,447,580,203,670 rows read at $1,422.58, against the invoiced D1 rows-read line of $1,447.58 — $25.00 below the invoice, exactly the 25B included allowance.</p>
+<p class="small muted">This is the output of the included script on the stated inputs, not a promise for your setup. Your numbers will differ; the skill prices yours.</p></section>
+
+<section class="reveal"><h2>Honest limits</h2><ul class="limits"><li>The skill prices usage from a snapshot you paste from the dashboard and Cloudflare&#x27;s published rates as read in November 2026. It cannot see your Cloudflare billing page, your real usage, or your spend settings — check Billing &gt; Billable Usage and Billing &gt; Spend limits in the dashboard before paying for anything.</li><li>The estimate is a floor, not a ceiling: it subtracts each included allowance once, and against the real $2,129 case it lands $25.00 below the invoiced D1 line.</li><li>Spend limits exist only for Workers and Durable Objects; D1, R2 and KV have no hard cap.</li><li>Durable Objects are not priced by the script — their meter is separate.</li><li>Rates change — verify on developers.cloudflare.com. This skill reduces surprise bills. It does not guarantee any saving, and it never executes a payment or changes your Cloudflare plan or settings.</li></ul></section>
+
+<section id="buy" class="reveal"><h2>Buy with USDT</h2><p>There is no card checkout on this store. Buying is a manual transfer, in four steps:</p><ol class="buy-steps"><li><strong>Send 9 USDT (TRC20)</strong> to this wallet address:</li></ol><div class="wallet"><code>TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez</code><button type="button" data-copy="TJ55nFLqS6uJ8hxE41QP4ZqEKzWJP51gez">Copy address</button></div><ol class="buy-steps" start="2"><li><strong>Send the transaction hash</strong> by Instagram DM to <a href="https://www.instagram.com/agent2027boutique" rel="noopener">@agent2027boutique</a>.</li><li><strong>We verify the hash on-chain</strong> (Tron network, TRC20).</li><li><strong>The download link is sent back</strong> to you in the same Instagram DM.</li></ol><p class="small muted">Send exactly 9 USDT on the TRC20 network. Sending on the wrong network, or a different amount, cannot be verified the same way — double-check the address before you send. Once the download link has been delivered, the sale is final: it is a digital file, so it cannot be returned.</p></section>
+
+<section class="reveal"><h2>You may also need</h2><div class="grid related"><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/actions-cost-cutter/">Actions Cost Cutter</a></h3><p class="problem">Cut your GitHub Actions bill before you pay it.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/copilot-credit-guard/">Copilot Credit Guard</a></h3><p class="problem">Stop burning your GitHub Copilot allowance.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article><article class="card"><div class="card-meta"><span class="tag">Claude Code</span><span class="tag tag-cat">Cost guard</span></div><h3><a href="/product/cursor-bill-guard/">Cursor Bill Guard</a></h3><p class="problem">Stop your $20 Cursor Pro plan becoming a $1,400 hour.</p><div class="price-row"><span class="price">$9</span><span class="price-note">one-time · USDT</span></div></article></div></section>
+</main>
+<footer><div class="wrap foot-grid"><div><p><strong>Priced Pain Finder</strong><br>Claude Code skills, priced by the pain they kill.<br>Every skill $9 one-time. Pay with USDT (TRC20).</p></div><div><p><a href="/#skills">All skills</a><br><a href="/#how-it-works">How buying works</a><br><a href="/#faq">FAQ</a></p></div><div><p><a href="https://www.instagram.com/agent2027boutique" rel="noopener">Instagram: @agent2027boutique</a><br><span class="small">Questions or a payment hash? Send it by Instagram DM.</span></p></div></div><div class="wrap"><p class="small">All skills version 0.1.0, MIT licence. Prices inside the skills are snapshots read in November 2026 — verify current rates before relying on them. No skill guarantees a saving. This store makes no earnings claims.</p></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>
